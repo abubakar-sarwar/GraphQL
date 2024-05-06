@@ -42,7 +42,7 @@ const userResolver = {
   },
   deleteUser: async ({ id }) => {
     try {
-      const user = await User.findByIdAndRemove(id);
+      const user = await User.findByIdAndDelete(id);
       return user;
     } catch (err) {
       throw new Error("Error deleting user");
